@@ -28,6 +28,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //Tratamentos de erros
+                if (peso.getText().toString().isEmpty() || Integer.parseInt(peso.getText().toString()) == 0) {
+                    peso.setError("Insira o peso");
+                    return;
+                }
+
+
+                if (altura.getText().toString().isEmpty() || Integer.parseInt(altura.getText().toString()) == 0) {
+                    altura.setError("Insira a altura");
+                    return;
+                }
+
+
+
+
                 double pesoInput = Double.parseDouble(peso.getText().toString());
                 double alturaInput = Double.parseDouble(altura.getText().toString());
 
